@@ -1,0 +1,13 @@
+from sense_hat import SenseHat
+
+sense = SenseHat()
+temp = sense.get_temperature()
+print("Temperature: %s C" % temp)
+
+# alternatives
+print(sense.temp)
+print(sense.temperature)
+sleep(1.5)
+
+orientation = sense.get_orientation_degrees()
+print("p: {pitch}, r: {roll}, y: {yaw}".format(**orientation))
