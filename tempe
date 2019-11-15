@@ -3,7 +3,8 @@ from time import sleep
 sense = SenseHat()
 temp = sense.get_temperature()
 print("Temperature: %s C" % temp)
-while true
+a = 1
+while a<3
 # alternatives
   print(sense.temp)
   print(sense.temperature)
