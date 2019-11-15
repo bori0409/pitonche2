@@ -17,9 +17,9 @@ while a<3:
   #print(sense.temp)
   #print(sense.temperature)
   orientation = sense.get_orientation_degrees()
-  new = orientation['pitch'] * 0.69
-  new2 = orientation['roll'] * 0.69
-  new3 = orientation['yaw'] * 0.69
+  new = round(orientation['pitch'] * 0.69)
+  new2 =  round(orientation['roll'] * 0.69)
+  new3 =  round(orientation['yaw'] * 0.69)
   print(new)
   sleep(0.3)
   #zakryglqm = round(orientation['pitch'])
