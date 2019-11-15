@@ -3,11 +3,11 @@ from time import sleep
 sense = SenseHat()
 temp = sense.get_temperature()
 print("Temperature: %s C" % temp)
-
+while(true)
 # alternatives
-print(sense.temp)
-print(sense.temperature)
-sleep(1.5)
+  print(sense.temp)
+  print(sense.temperature)
+  sleep(1.5)
 
-orientation = sense.get_orientation_degrees()
-print("p: {pitch}, r: {roll}, y: {yaw}".format(**orientation))
+  orientation = sense.get_orientation_degrees()
+  print("p: {pitch}, r: {roll}, y: {yaw}".format(**orientation))
