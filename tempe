@@ -1,14 +1,48 @@
+  
 from sense_hat import SenseHat
 from time import sleep
 sense = SenseHat()
 temp = sense.get_temperature()
+orientation = sense.get_orientation_degrees()
 print("Temperature: %s C" % temp)
 a = 1
+b=0
+#X = [0, 0, 0]  # Red
+O = (255, 255, 255)  # White
+
+
+#sense.set_pixels(question_mark)
 while a<3:
 # alternatives
-  print(sense.temp)
-  print(sense.temperature)
-  sleep(1.5)
-
+  #print(sense.temp)
+  #print(sense.temperature)
   orientation = sense.get_orientation_degrees()
-  print("p: {pitch}, r: {roll}, y: {yaw}".format(**orientation))
+  new = orientation['pitch'] * 0.69
+  new2 = orientation['roll'] * 0.69
+  new3 = orientation['yaw'] * 0.69
+  print(new)
+  sleep(0.3)
+  #zakryglqm = round(orientation['pitch'])
+  O = [new, new2, new3]
+  X = [0, 0, 0]
+  question_mark = [
+O, O, O, X, X, O, O, O,
+O, O, X, O, O, X, O, O,
+O, O, O, O, O, X, O, O,
+O, O, O, O, X, O, O, O,
+O, O, O, X, O, O, O, O,
+O, O, O, X, O, O, O, O,
+O, O, O, O, O, O, O, O,
+O, O, O, X, O, O, O, O
+]
+  sense.set_pixels(question_mark)
+  orientation = sense.get_orientation_degrees()
+  #zakryglqm = round(orientation['pitch'])
+  #new = zakryglqm / 0.69
+  #print(zakryglqm)
+  #print(orientation['pitch'])
+  #print("p: {pitch}, r: {roll}, y: {yaw}".format(**orientation))
+  sense.set_pixels(question_mark)
+  
+  
+  
