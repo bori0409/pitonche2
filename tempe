@@ -23,8 +23,8 @@ while a<3:
   print(new)
   sleep(0.3)
   #zakryglqm = round(orientation['pitch'])
-  O = [new, new2, new3]
-  X = [0, 0, 0]
+  O = (new, new2, new3)
+  X = (150,150,150)
   question_mark = [
 O, O, O, X, X, O, O, O,
 O, O, X, O, O, X, O, O,
