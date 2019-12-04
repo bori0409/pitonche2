@@ -13,7 +13,7 @@ s = socket(AF_INET, SOCK_DGRAM)
 # no explicit bind: will bind to default IP + random port
 s.setsockopt(SOL_SOCKET, SO_BROADCAST, 1)
 while True:
-	data = "Current time " + str(datetime.now())
+	data = "Current time " + str(datetime.now()) +  "Roll" +  str(orientation['roll'])+"Yaw" + str(orientation['yaw'])+"Pitch" +  str(orientation['pitch'])
 	data2= "Roll" +  str(orientation['roll'])
 	data3= "Yaw" + str(orientation['yaw'])
 	data4= "Pitch" +  str(orientation['pitch'])
@@ -21,5 +21,8 @@ while True:
 	s.sendto(bytes(data2, "UTF-8"), ('<broadcast>', BROADCAST_TO_PORT))
 	s.sendto(bytes(data3, "UTF-8"), ('<broadcast>', BROADCAST_TO_PORT))
 	s.sendto(bytes(data4, "UTF-8"), ('<broadcast>', BROADCAST_TO_PORT))
+	print(data2)
 	print(data)
+	print(data3)
+	print(data4)
 	time.sleep(1)
