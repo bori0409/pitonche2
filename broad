@@ -6,7 +6,7 @@ from sense_hat import SenseHat
 from time import sleep
 
 sense = SenseHat()
-
+orientation = sense.get_orientation_degrees()
    
 s = socket(AF_INET, SOCK_DGRAM)
 #s.bind(('', 14593))     # (ip, port)
