@@ -17,7 +17,7 @@ while True:
 	sense = SenseHat()
 	orientation = sense.get_orientation_degrees()
 	device = 1
-	data = "Az  " +  str(orientation['roll']) + ' ' + str(orientation['yaw']) + ' ' +  str(orientation['pitch'])+ ' ' + str(datetime.now()) ' ' + str(device)
+	data = "Az  " +  str(orientation['roll']) + " "  + str(orientation['yaw']) + " "  +  str(orientation['pitch'])+ " "  + str(datetime.now()) " "  + str(device)
 	
 	s.sendto(bytes(data, "UTF-8"), ('<broadcast>', BROADCAST_TO_PORT))
 	
