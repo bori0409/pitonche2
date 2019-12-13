@@ -26,6 +26,7 @@ while True:
  laino = "laino"
  print(new)
  print(data)
+ print(laino)
 
  time.sleep(0.5)
  sense.clear()
