@@ -23,10 +23,10 @@ while True:
  new = int(round(orientation['pitch'])
  #new2 =  int(round(orientation['roll'])
  #new3 =  int(round(orientation['yaw'])
- laino = ("laino")
+
  print(new)
  print(data)
- print(laino)
+
 
  time.sleep(0.5)
  sense.clear()
