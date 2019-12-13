@@ -22,7 +22,7 @@ while True:
  #new2 =  int(round(orientation['roll'])
  #new3 =  int(round(orientation['yaw'])
  print(new)
- print(data)
+ #print(data)
  time.sleep(0.5)
  sense.clear()
 	
