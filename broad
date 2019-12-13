@@ -16,11 +16,9 @@ while True:
  sense = SenseHat()
  orientation = sense.get_orientation_degrees()
  device = 1
- data = " " +  str(int(orientation['roll'])) + " "  + str(orientation['yaw']) + " "  +  str(orientation['pitch'])+ " "  + str(datetime.now()) + " "  + str(device)
+ data = " " +  str(int(orientation['roll'])) + " "  + str(int(orientation['yaw'])) + " "  +  str(int(orientation['pitch']))+ " "  + str(datetime.now()) + " "  + str(device)
  #s.sendto(bytes(data, "UTF-8"), ('<broadcast>', BROADCAST_TO_PORT))
- new = int(round(orientation['pitch']*1))
- #new2 =  int(round(orientation['roll'])
- #new3 =  int(round(orientation['yaw'])
+
  print(new)
  print(data)
  time.sleep(0.5)
